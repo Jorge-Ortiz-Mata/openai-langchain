@@ -1,4 +1,5 @@
-from langchain.llms import OpenAI
+# from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from dotenv import load_dotenv
@@ -6,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def generic_answer(answer):
-  llm = OpenAI(temperature=0.6)
+  llm = ChatOpenAI(temperature=0.6, model_name="gpt-3.5-turbo")
 
   prompt_template = PromptTemplate(
     input_variables=["answer"],
