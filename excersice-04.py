@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Agents excersice
 def langchain_agent():
   llm = ChatOpenAI(temperature=0.6, model_name="gpt-3.5-turbo")
 
